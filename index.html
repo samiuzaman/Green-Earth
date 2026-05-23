@@ -21,8 +21,10 @@
       @theme {
         --color-primaryColor: #15803D;
         --color-secondColor: #FACC15;
+        --color-backgroundColor: #f0fdf4;
+        --color-bannerBgColor: #CFF0DC;
         --color-darkColor: #1F2937;
-        --color-grayColor: ##425158;
+        --color-grayColor: #425158;
         --color-lightGreenColor: #DCFCE7;
         --color-borderColor: rgba(212, 214, 213, 1);
         /* --color-bannerBg: "bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]"; */
@@ -30,7 +32,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="bg-backgroundColor font-primaryFont">
     <header>
       <nav class="bg-primaryColor flex justify-between items-center py-5 px-[6%]">
         <!-- Logo -->
@@ -42,11 +44,21 @@
           <li class="hover:underline cursor-pointer">Plant a Tree</li>
          </ul>
          <!-- Button -->
-          <button class="bg-secondColor text-primaryColor px-3 py-1.5 rounded-full">Plant a Tree</button>
+          <button class="bg-secondColor text-primaryColor px-3 py-1.5 rounded-full cursor-pointer">Plant a Tree</button>
       </nav>
       <!-- Hero Section code -->
-      <section>
-        hero
+      <section class="bg-bannerBgColor flex justify-between items-center mb-20">
+        <div>
+          <img src="./assets/hero-leaf1.png" alt="hero-leaf1">
+        </div>
+        <div class="space-y-4 text-center">
+          <h1 class="text-xl lg:text-3xl 2xl:text-4xl font-bold">Plant a Tree, Grow a Future</h1>
+          <p class="text-grayColor">Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
+          <button class="bg-secondColor text-primaryColor px-3 py-1.5 rounded-full cursor-pointer">Get Involved</button>
+        </div>
+        <div>
+          <img src="./assets/hero-leaf2.png" alt="hero-leaf2">
+        </div>
       </section>
     </header>
     <main>
