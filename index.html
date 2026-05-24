@@ -26,6 +26,7 @@
         --color-darkColor: #1F2937;
         --color-grayColor: #425158;
         --color-lightGreenColor: #DCFCE7;
+        --color-darkGreenColor: #14532D;
         --color-borderColor: rgba(212, 214, 213, 1);
         /* --color-bannerBg: "bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]"; */
         --font-primaryFont: Inter;
@@ -104,8 +105,23 @@
        </section>
       <!-- Our Impact Code end here -->
     </main>
-    <footer>
-      footer
+    <footer class="bg-[#166534] pt-12">
+      <h2 class="text-white text-2xl lg:text-3xl 2xl:text-4xl font-bold text-center mb-5">Plant a Tree Today</h2>
+      <div class="w-5/12 mx-auto bg-primaryColor py-5 rounded-lg shadow-2xl border border-darkGreenColor mb-10 p-6">
+       <form>
+        <input type="text" name="text" placeholder="Your Name" class="w-full bg-white rounded-lg py-2 focus:outline-none px-3 mb-4">
+        <input type="email" name="email" placeholder="Your Email Address" class="w-full bg-white rounded-lg py-2 focus:outline-none px-3 mb-4">
+        <select name="select" class="w-full bg-white rounded-lg py-2 focus:outline-none px-3 mb-4">
+          <option value="plant-0">Number of Trees</option>
+          <option value="plant-1">plant 1</option>
+          <option value="plant-2">plant 2</option>
+          <option value="plant-3">plant 3</option>
+        </select>
+        
+        <input type="submit" name="submit" value="Donate Now" class="w-full bg-secondColor rounded-full cursor-pointer py-2 focus:outline-none px-3 mb-4">
+       </form>
+      </div>
+      <p class="bg-darkGreenColor text-center text-white py-2"> &copy; 2026 Green Earth. All Rights Reserved.</p>
     </footer>
   </body>
 </html>
