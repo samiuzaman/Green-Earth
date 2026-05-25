@@ -63,24 +63,22 @@
       </section>
     </header>
     <main>
+      <div id="modal-container" class="fixed w-[35%] top-[3%] 2xl:top-[8%] left-[30%] overflow-y-auto">
+
+            </div>
             <!-- Choose Your Trees Code start here -->
-       <section class="w-11/12 lg:w-5/6 2xl:w-11/12 mx-auto py-10 border mb-14">
+       <section class="w-11/12 lg:w-5/6 2xl:w-11/12 mx-auto py-10 mb-14">
         <h2 class="text-darkColor text-2xl lg:text-3xl 2xl:text-4xl font-bold text-center mb-6">Choose Your Trees</h2>
         <div class="flex justify-between items-start gap-5">
           <!-- left Side category -->
           <aside class="w-2/12">
             <h4 class="text-xl font-semibold text-darkColor mb-5">Category</h4>
             <ul id="category-list-container" class="space-y-1">
-              <li class="py-2 w-full  hover:bg-primaryColor hover:text-white hover:rounded-sm pl-2 cursor-pointer">All Trees</li>
+              <li id="all-trees-btn" class="py-2 w-full hover:bg-primaryColor hover:text-white rounded-sm pl-2 cursor-pointer">All Trees</li>
             </ul>
           </aside>
-          <!-- Tree Card 3 column -->
-           <div id="plants-card-container" class="w-8/12 grid grid-cols-3 gap-5">
-
-            
-            
-            
-
+          <!-- Trees Card 3 column -->
+           <div id="plants-card-container" class="w-8/12 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
            </div>
           <!-- Right Side Cart -->
           <aside class="w-2/12 bg-white h-full p-4 rounded-sm">
