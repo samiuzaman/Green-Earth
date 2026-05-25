@@ -128,12 +128,40 @@ const displayAllPlantsCard = (plants) => {
         <h4 onclick="handleModal()" id="${id}" class="heading cursor-pointer text-darkColor text-lg font-bold">${name}</h4>
         <p class="text-grayColor text-sm text-justify"> ${description} </p>
         <div class="flex justify-between items-center py-1">
-          <span class="bg-lightGreenColor py-1 px-4 rounded-full text-primaryColor">${category}</span>
-          <span class="font-bold">৳${price}</span>
+          <p class="bg-lightGreenColor py-1 px-4 rounded-full text-primaryColor">${category}</p>
+          <p class="font-bold">৳<span class="price">${price}</span> </p>
         </div>
-        <button class="bg-primaryColor py-2 text-white w-full rounded-full cursor-pointer">Add to Cart</button>
+        <button class="add-to-cart-btn bg-primaryColor py-2 text-white w-full rounded-full cursor-pointer">Add to Cart</button>
         </div>
     `;
     plantsCardContainer.appendChild(plantCard);
   });
 };
+
+const addToCart = () => {
+
+}
+let totalPrice = 0
+plantsCardContainer.addEventListener("click", (event)=>{
+  if(event.target.classList.contains("add-to-cart-btn")){
+    document.getElementById("cart-empty").classList.add("hidden");
+    const card = event.target.parentElement;
+    console.log(card.parentElement.parentElement)
+    const name = card.querySelector(".heading").innerText;
+    const price = card.querySelector(".price").innerText;
+    totalPrice = parseInt(totalPrice) + parseInt(price);
+    const addToCartDiv = document.getElementById("add-to-cart-div");
+    const plant = document.createElement("div");
+    plant.classList.add("bg-lightGreenColor", "p-3", "rounded-sm", "flex", "justify-between", "items-center", "mb-3");
+    plant.innerHTML = `
+    <div class="space-y-2">
+      <p class="font-semibold text-darkColor">${name}</p>
+      <p class="text-grayColor">৳ <span>${price}</span> x 1</p>
+    </div>
+      <i class="cursor-pointer fa-solid fa-x"></i>
+    `
+    addToCartDiv.appendChild(plant);
+    document.getElementById("total-price-element").innerText = totalPrice;
+  }
+})
+console.log(totalPrice)

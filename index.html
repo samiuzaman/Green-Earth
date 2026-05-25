@@ -67,7 +67,7 @@
 
             </div>
             <!-- Choose Your Trees Code start here -->
-       <section class="w-11/12 lg:w-5/6 2xl:w-11/12 mx-auto py-10 mb-14">
+       <section class="w-11/12 mx-auto py-10 mb-14">
         <h2 class="text-darkColor text-2xl lg:text-3xl 2xl:text-4xl font-bold text-center mb-6">Choose Your Trees</h2>
         <div class="flex justify-between items-start gap-5">
           <!-- left Side category -->
@@ -81,8 +81,16 @@
            <div id="plants-card-container" class="w-8/12 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
            </div>
           <!-- Right Side Cart -->
-          <aside class="w-2/12 bg-white h-full p-4 rounded-sm">
-            Your Cart
+          <aside class="w-3/12 2xl:w-2/12 bg-white h-full p-4 rounded-sm">
+            <h4 class="text-xl font-semibold text-darkColor mb-4">Your Cart</h4>
+            <div  id="add-to-cart-div">
+              <h3 id="cart-empty" class="text-darkColor text-lg font-bold text-center mt-3 mb-4">Your cart is empty</h3>
+            </div>
+            <hr class="text-gray-300 pt-6">
+            <div class="flex justify-between items-center">
+              <p class="text-darkColor font-semibold text-lg">Total:</p>
+              <p class="text-darkColor font-semibold text-lg"> ৳ <span id="total-price-element">00</span> </p>
+            </div>
           </aside>
         </div>
        </section>
@@ -137,9 +145,9 @@
         <input type="email" name="email" placeholder="Your Email Address" class="w-full bg-white rounded-lg py-2 focus:outline-none px-3 mb-4">
         <select name="select" class="w-full bg-white rounded-lg py-2 focus:outline-none px-3 mb-4">
           <option value="plant-0">Number of Trees</option>
-          <option value="plant-1">plant 1</option>
-          <option value="plant-2">plant 2</option>
-          <option value="plant-3">plant 3</option>
+          <option value="plant-1">1 Plant ৳20</option>
+          <option value="plant-2">5 Plant ৳100</option>
+          <option value="plant-3">20 Plant ৳4000</option>
         </select>
         
         <input type="submit" name="submit" value="Donate Now" class="w-full bg-secondColor text-primaryColor rounded-full cursor-pointer py-2 focus:outline-none px-3 mb-4">
